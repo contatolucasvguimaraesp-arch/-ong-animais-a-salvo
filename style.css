@@ -1,0 +1,404 @@
+:root {
+    --verde-escuro: #183d2b;
+    --verde-floresta: #285b3c;
+    --verde-folha: #78945b;
+    --verde-claro: #e8efe2;
+    --creme: #f7f4e9;
+    --terra: #a65f3d;
+    --dourado: #e2b84b;
+    --texto: #25332a;
+    --branco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--creme);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+.topo {
+    align-items: center;
+    background: var(--verde-escuro);
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 7%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--branco);
+    font-size: 1.35rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--branco);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--dourado);
+}
+
+.hero {
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(15, 43, 28, 0.88), rgba(15, 43, 28, 0.28)),
+        url("images/floresta.webp") center/cover;
+    color: var(--branco);
+    display: flex;
+    min-height: 540px;
+    padding: 80px 8%;
+}
+
+.hero-conteudo {
+    max-width: 680px;
+}
+
+.etiqueta {
+    color: var(--dourado);
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--verde-escuro);
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: var(--verde-floresta);
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+}
+
+.botao {
+    background: var(--dourado);
+    border: 0;
+    border-radius: 6px;
+    color: var(--verde-escuro);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 13px 22px;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.botao:hover,
+.botao:focus {
+    background: #f0ca68;
+    transform: translateY(-2px);
+}
+
+.secao {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 70px 7%;
+}
+
+.sobretitulo {
+    color: var(--terra);
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.texto-central {
+    margin: 0 auto 35px;
+    max-width: 760px;
+}
+
+.cartoes {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 30px;
+}
+
+.cartao {
+    background: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(24, 61, 43, 0.09);
+    overflow: hidden;
+}
+
+.cartao img {
+    display: block;
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cartao-conteudo {
+    padding: 22px;
+}
+
+.faixa-verde {
+    align-items: center;
+    background: var(--verde-floresta);
+    color: var(--branco);
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 55px 8%;
+}
+
+.faixa-verde h2 {
+    color: var(--branco);
+}
+
+.faixa-verde p {
+    max-width: 720px;
+    margin-bottom: 0;
+}
+
+.botao-claro {
+    flex-shrink: 0;
+}
+
+footer {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    font-size: 0.9rem;
+    padding: 24px 7%;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+.pagina-titulo {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.pagina-titulo h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.pagina-titulo p {
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+.projeto-destaque {
+    display: grid;
+    gap: 38px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: start;
+}
+
+.imagem-projeto {
+    border-radius: 12px;
+    height: 480px;
+    object-fit: cover;
+    position: sticky;
+    top: 20px;
+    width: 100%;
+}
+
+.detalhes-projeto h2 {
+    margin-bottom: 20px;
+}
+
+.detalhes-projeto h3 {
+    margin-top: 25px;
+}
+
+.lista-projeto {
+    margin: 0 0 20px 22px;
+}
+
+.lista-projeto li {
+    margin-bottom: 10px;
+}
+
+.aviso {
+    background: var(--verde-claro);
+    margin: 0 auto 60px;
+    max-width: 1050px;
+    padding: 35px;
+    width: 86%;
+    border-left: 5px solid var(--verde-folha);
+    border-radius: 6px;
+}
+
+.aviso p {
+    margin-bottom: 0;
+}
+
+.aviso-ficticio {
+    background: var(--verde-claro);
+    border-left: 4px solid var(--terra);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.formulario-secao {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 45px 7% 70px;
+}
+
+form {
+    background: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(24, 61, 43, 0.08);
+    padding: 30px;
+}
+
+fieldset {
+    border: 1px solid #d5dfd1;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+legend {
+    color: var(--verde-floresta);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 6px;
+}
+
+input:not([type="checkbox"]),
+select {
+    background: var(--branco);
+    border: 1px solid #b9c7b6;
+    border-radius: 5px;
+    font: inherit;
+    padding: 11px;
+    width: 100%;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--verde-floresta);
+    outline: 2px solid #b7cbb0;
+}
+
+.aceite {
+    align-items: flex-start;
+    display: flex;
+    font-size: 0.92rem;
+    font-weight: normal;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.aceite input {
+    margin-top: 7px;
+}
+
+.observacao {
+    color: #5a665c;
+    font-size: 0.85rem;
+    margin-top: 16px;
+}
+
+#mensagem {
+    color: var(--verde-floresta);
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+    .topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 60px 7%;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao img {
+        height: 240px;
+    }
+
+    .faixa-verde {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .projeto-destaque {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-projeto {
+        height: 300px;
+        position: static;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    fieldset {
+        padding: 14px;
+    }
+}
